@@ -1,0 +1,18 @@
+<h2 style="color:blue">My Shops</h2>
+
+<form action="http://localhost:4200/api/shop" method="post">
+  X:<br>
+  <input id="x" type="text" name="x"><br>
+  Y:<br>
+  <input id="y" type="text" name="y">
+  <input type="submit" value="Submit">
+ 
+</form>
+
+<ul class="list-group">
+    <li *ngFor="let shop of shops" class="list-group-item list-group-item-info"
+		[class.selected]="shop === selectedShop" (click)="onSelect(shop)">
+		<span style="color:blue">{{shop.id}} - {{shop.name}}</span>
+	</li>
+</ul>
+<shop-detail [shop]="selectedShop"></shop-detail>

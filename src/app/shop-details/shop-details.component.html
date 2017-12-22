@@ -1,0 +1,22 @@
+<div *ngIf="shop">
+	<h4>{{shop.name}} details!</h4>
+	<div>
+		<label>id: </label>{{shop._id}}
+	</div>
+	<div>
+		<label>First Name: </label>{{shop.city}}
+	</div>
+	<div>
+		<label>Last Name: </label>{{shop.picture}}
+	</div>
+	<div>
+		<label>Age: </label>{{shop.email}}
+	</div>
+	<div>
+		<label>X: </label>{{shop.location.coordinates[0]}}
+	</div>
+	<div>
+		<label>Y: </label>{{shop.location.coordinates[1]}}
+	</div>
+</div>
+
