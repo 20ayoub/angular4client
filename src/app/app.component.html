@@ -14,10 +14,23 @@
   </div>
 </div>  
 
-<ul class="list-group">
+<div class="row">
+<div *ngFor="let shop of shops" class="card col-sm-2" style="width: 20rem; border:1px solid grey; margin-right:20px; margin-top:20px;">
+  <br/>
+  <img class="card-img-top" [src]="shop.picture" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">{{shop.name}}</h4>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary btn-md">Like</a>
+    <a href="#" class="btn btn-danger btn-md">Dislike</a>
+  </div>
+  <br/>
+</div>
+</div>
+<!-- <ul class="list-group">
     <li *ngFor="let shop of shops" class="list-group-item list-group-item-info"
 		[class.selected]="shop === selectedShop" (click)="onSelect(shop)">
 		<span style="color:blue">{{shop.id}} - {{shop.name}}</span>
 	</li>
 </ul>
-<shop-detail [shop]="selectedShop"></shop-detail>
+<shop-detail [shop]="selectedShop"></shop-detail>  -->
