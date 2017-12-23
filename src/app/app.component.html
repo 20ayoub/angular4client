@@ -1,13 +1,18 @@
 <h2 style="color:blue">My Shops</h2>
 
-<form action="http://localhost:4200/api/shop" method="post">
-  X:<br>
-  <input id="x" type="text" name="x"><br>
-  Y:<br>
-  <input id="y" type="text" name="y">
-  <input type="submit" value="Submit">
- 
-</form>
+ <div>
+  <div>
+     <label>X: </label>
+     <input [(ngModel)]="x" />
+  </div>
+  <div>
+     <label>Y: </label>
+     <input [(ngModel)]="y" />
+  </div>
+  <div>
+     <button (click)="search()">Search</button>
+  </div>
+</div>  
 
 <ul class="list-group">
     <li *ngFor="let shop of shops" class="list-group-item list-group-item-info"

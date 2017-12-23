@@ -1,3 +1,5 @@
+import { Point } from './Point';
+
 export class Shop {
   _id: string;
   picture: string;
@@ -15,12 +17,4 @@ export class Shop {
   this.city = city;
   this.location = location;
 }
-}
-class Point {
-  coordinates = Array<{coor:number}>(2);
-  
-  constructor(coordinates : Array<{coor : number}>){
-
-    this.coordinates=coordinates;  
-  }
 }
